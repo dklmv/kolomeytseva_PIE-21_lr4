@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Задание №2</title>
+  </head>
+  <body>
+    <script>
+      N = parseFloat(prompt("Введите длину массива:"));
+      console.log("Длина массива равна: " + N);
+
+      array = [];
+      for (let i = 0; i < N; i++) {
+        array.push(Math.floor(Math.random() * 100));
+      }
+
+      console.log("Массив без изменений: " + array);
+
+      min_ele = array[0];
+      min_ele_num = 0;
+      max_ele = array[0];
+      max_ele_num = 0;
+      for (let i = 0; i < N; i++) {
+        if (array[i] < min_ele) {
+          min_ele = array[i];
+          min_ele_num = i;
+        } else if (array[i] > max_ele) {
+          max_ele = array[i];
+          max_ele_num = i;
+        }
+      }
+
+      console.log("Минимальный элемент равен: " + min_ele);
+      console.log("Максимальный элемент равен: " + max_ele);
+
+      array[min_ele_num] = max_ele;
+      array[max_ele_num] = min_ele;
+
+      console.log("Измененный массив равен: " + array);
+    </script>
+  </body>
+</html>

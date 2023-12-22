@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Задание №1</title>
+  </head>
+  <body>
+    <script>
+      N = parseFloat(prompt("Введите четное число N: "));
+      if (N % 2 != 0) {
+        console.log("Число не четное!");
+      } else {
+        console.log("Значение N: " + N);
+        let array = [];
+        for (let i = 0; i < N; i++) {
+          array.push(Math.floor(Math.random() * 100));
+        }
+        console.log("Исходный массив: " + array);
+        array_2 = [];
+        for (let i = 0; i < array.length; i += 2) {
+          array_2.push(array[i]);
+        }
+        console.log(
+          "Значения с четными номерами в порядке возрастания номеров: " +
+            array_2
+        );
+      }
+    </script>
+  </body>
+</html>
